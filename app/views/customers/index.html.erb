@@ -1,0 +1,12 @@
+<%= render 'nav/nav' %>
+<section class="cards-container">
+  <% @customers.each do |customer| %>
+      <article class="card">
+        <img src="<%= customer.image_url %>" />
+        <h2><%= customer.name %></h2>
+        <p><%= customer.customer_type %></p>
+        <p><%= customer.description %></p>
+        <a href="<%= customer.url %>" target="_blank">Sitio web</a>
+      </article>
+  <% end %>
+</section>
